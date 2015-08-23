@@ -1,0 +1,20 @@
+<!DOCTYPE html><html><head><title></title><link rel="stylesheet" href="/stylesheets/style.css"><script src="javascripts/jquery-1.7.2.min.js"></script></head><body><h1>Hello World</h1><p>Welcome to</p><p><span>userId:</span><br><input id="userid" name="userid" type="text"></p><p><span>password:</span><br><input id="password" name="password" type="password"></p><p><input id="test" type="button" value="submit"></p><script>$(function(){
+    $("#test").click(function(){
+        $.ajax({
+            type:'post',
+        url: '/test',
+        dataType: 'json',
+        success: function (data) {
+            console.log('c恒工了');
+        console.log(data);
+            alert(data);
+        },
+        error: function (err) {
+            console.log('出错了');
+            console.log(err);
+        }
+        })
+    });
+})
+
+      </script></body></html>

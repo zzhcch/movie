@@ -1,0 +1,99 @@
+//
+  Created by Cheng.Zhang on 8/17/2015.
+html
+    meta(charset='UTF-8')
+    head
+        script(type='text/javascript', src='http://www.francescomalagrino.com/BootstrapPageGenerator/3/js/jquery-2.0.0.min.js')
+        script(type='text/javascript', src='http://www.francescomalagrino.com/BootstrapPageGenerator/3/js/jquery-ui')
+        link(href='http://www.francescomalagrino.com/BootstrapPageGenerator/3/css/bootstrap-combined.min.css', rel='stylesheet', media='screen')
+        script(type='text/javascript', src='http://www.francescomalagrino.com/BootstrapPageGenerator/3/js/bootstrap.min.js')
+    body
+        .container-fluid
+            .row-fluid
+                .span12
+                    .navbar
+                        .navbar-inner
+                            .container-fluid
+                                a.btn.btn-navbar(data-target='.navbar-responsive-collapse', data-toggle='collapse')
+                                    span.icon-bar
+                                    span.icon-bar
+                                    span.icon-bar
+                                a.brand(href='#')
+                                    | Data
+                                    | Report
+                                .nav-collapse.collapse.navbar-responsive-collapse
+                                    ul.nav
+                                        li.active
+                                            a(href='#') 主页
+                                        li
+                                            a(href='#') 链接
+                                        li
+                                            a(href='#') 链接
+                                        li.dropdown
+                                            a.dropdown-toggle(data-toggle='dropdown', href='#')
+                                                | 下拉菜单
+                                                strong.caret
+                                            ul.dropdown-menu
+                                                li
+                                                    a(href='#') 下拉导航1
+                                                li
+                                                    a(href='#') 下拉导航2
+                                                li
+                                                    a(href='#') 其他
+                                                li.divider
+                                                li.nav-header 标签
+                                                li
+                                                    a(href='#') 链接1
+                                                li
+                                                    a(href='#') 链接2
+                                    ul.nav.pull-right
+                                        li
+                                            a(href='#') 右边链接
+                                        li.divider-vertical
+                                        li.dropdown
+                                            a.dropdown-toggle(data-toggle='dropdown', href='#')
+                                                | 下拉菜单
+                                                strong.caret
+                                            ul.dropdown-menu
+                                                li
+                                                    a(href='#') 下拉导航1
+                                                li
+                                                    a(href='#') 下拉导航2
+                                                li
+                                                    a(href='#') 其他
+                                                li.divider
+                                                li
+                                                    a(href='#') 链接3
+                    .row-fluid
+                        .span2
+                            ul.nav.nav-list
+                                li.nav-header 列表标题
+                                li
+                                    a(href='report-index') 首页
+                                li.active
+                                    a(href='report-import') xls-import
+                                li.nav-header 功能列表
+                                li
+                                    a(href='report-beling') Beling Report
+                                li
+                                    a(href='report-wpl') WPL KPI
+                                li
+                                    a(href='report-wb') wb scorecard
+                                li.divider
+                                li
+                                    a(href='#') 帮助
+                        .span10
+                            form(action='/import', method='post')
+                                fieldset
+                                    legend(contenteditable='true') 录入
+                                    label(contenteditable='true') excel文件绝对路径:
+                                    input(style='width:650px;height:30px;', placeholder='url…', type='text',name='filename')
+                                    label(contenteditable='true') sheet名称:
+                                    input(style='width:350px;height:30px;', placeholder='默认为List…', type='text',name='sheet')
+                                    span.help-block(contenteditable='true')
+                                        | 1,只支持.xls格式文件
+                                        br
+                                        | 2,请输入xls文件绝对路径地址
+                                    button.btn.btn-large.btn-primary(type='submit', contenteditable='true') 导入
+
+                                <span>#{message}</span>

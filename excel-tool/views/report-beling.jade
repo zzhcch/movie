@@ -1,0 +1,1239 @@
+//
+  Created by Cheng.Zhang on 8/17/2015.
+html
+    meta(charset='utf-8')
+    head
+        script(type='text/javascript', src='javascripts/jquery-2.0.0.min.js')
+        script(type='text/javascript', src='javascripts/jquery-ui')
+        link(href='stylesheets/bootstrap-combined.min.css', rel='stylesheet', media='screen')
+        link(href='http://www.oschina.net/js/2013/glDatePicker/glDatePicker.default.css', rel='stylesheet', type='text/css')
+        script(type='text/javascript', src='javascripts/bootstrap.min.js')
+        script(src='javascripts/glDatePicker.min.js')
+        script(type='text/javascript',src='javascripts/jq-page.js')
+    body
+        .container-fluid
+            .row-fluid
+                .span12
+                    .navbar
+                        .navbar-inner
+                            .container-fluid
+                                a.btn.btn-navbar(data-target='.navbar-responsive-collapse', data-toggle='collapse')
+                                    span.icon-bar
+                                    span.icon-bar
+                                    span.icon-bar
+                                a.brand(href='#')
+                                    | Data
+                                    | Report
+                                .nav-collapse.collapse.navbar-responsive-collapse
+                                    ul.nav
+                                        li.active
+                                            a(href='#') 主页
+                                        li
+                                            a(href='#') 链接
+                                        li
+                                            a(href='#') 链接
+                                        li.dropdown
+                                            a.dropdown-toggle(data-toggle='dropdown', href='#')
+                                                | 下拉菜单
+                                                strong.caret
+                                            ul.dropdown-menu
+                                                li
+                                                    a(href='#') 下拉导航1
+                                                li
+                                                    a(href='#') 下拉导航2
+                                                li
+                                                    a(href='#') 其他
+                                                li.divider
+                                                li.nav-header 标签
+                                                li
+                                                    a(href='#') 链接1
+                                                li
+                                                    a(href='#') 链接2
+                                    ul.nav.pull-right
+                                        li
+                                            a(href='#') 右边链接
+                                        li.divider-vertical
+                                        li.dropdown
+                                            a.dropdown-toggle(data-toggle='dropdown', href='#')
+                                                | 下拉菜单
+                                                strong.caret
+                                            ul.dropdown-menu
+                                                li
+                                                    a(href='#') 下拉导航1
+                                                li
+                                                    a(href='#') 下拉导航2
+                                                li
+                                                    a(href='#') 其他
+                                                li.divider
+                                                li
+                                                    a(href='#') 链接3
+                    .row-fluid
+                        .span2
+                            ul.nav.nav-list
+                                li.nav-header 列表标题
+                                li
+                                    a(href='report-index') 首页
+                                li
+                                    a(href='report-import') xls-import
+                                li.nav-header 功能列表
+                                li.active
+                                    a(href='report-beling') Beling Report
+                                li
+                                    a(href='report-wpl') WPL KPI
+                                li
+                                    a(href='report-wb') wb scorecard
+                                li.divider
+                                label(contenteditable='true') 请选择月份:
+                                input#mydate(type='text', gldp-id='mydate', style='width:150px;')
+                                div(gldp-el='mydate', style='width:350px; height:300px; position:absolute; top:70px; left:100px;')
+                                button#beling-query.btn.btn-primary(contenteditable='true', type='submit') 提交
+                        .span10
+                            #tabs-107975.tabbable
+                                ul.nav.nav-tabs
+                                    li.active
+                                        a(href='#panel-Summary', data-toggle='tab') Summary
+                                    li
+                                        a(href='#panel-Asia', data-toggle='tab') Asia
+                                    li
+                                        a(href='#panel-China', data-toggle='tab') China
+                                    li
+                                        a(href='#panel-India', data-toggle='tab') India
+                                    li
+                                        a(href='#panel-Taiwan', data-toggle='tab') Taiwan
+                                    li
+                                        a(href='#panel-Japan(CS)', data-toggle='tab') Japan(CS)
+                                    li
+                                        a(href='#panel-MEA', data-toggle='tab') MEA
+                                    li
+                                        a(href='#panel-Europe', data-toggle='tab') Europe
+                                    li
+                                        a(href='#panel-CIS', data-toggle='tab') CIS
+                                    li
+                                        a(href='#panel-Latin America', data-toggle='tab') Latin America
+                                    li
+                                        a(href='#panel-US', data-toggle='tab') US
+                                    li
+                                        a(href='#panel-Other (BC Global)', data-toggle='tab') Other (BC Global)
+                                    li
+                                        a(href='#panel-non NSC request', data-toggle='tab') non NSC request
+                                .tab-content
+                                    #panel-Summary.tab-pane.active
+                                        h4 Consumer Site
+                                        table#Consumer.table.table-condensed.table-hover.table-bordered.table-striped
+                                            thead
+                                                tr
+                                                    th(colspan='2', width='35%')
+                                                    th(width='5%')  Total
+                                                    th(width='5%')  Asia
+                                                    th(width='5%')  China
+                                                    th(width='5%')  India
+                                                    th(width='5%')  Taiwan
+                                                    th(width='5%')  Japan
+                                                    th(width='5%')  MEA
+                                                    th(width='5%')  Europe
+                                                    th(width='5%')  CIS
+                                                    th(width='5%')  Latin America
+                                                    th(width='5%')  Canada
+                                                    th(width='5%')  US
+                                                    th(width='5%')  non-NSC
+                                            tbody
+                                                tr
+                                                    th(rowspan='12', width='12%') Creation
+                                                    th  Large Product
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th  Medium Product
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th  Small Product
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th Large Static
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th  Medium Static
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th  Small Static
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th Static
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th  DHP Default Page
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th  DHP Target Page
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th  Large Smart protal
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th  Medium Smart Portal
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th  Small Smart Portal
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th(rowspan='3')  Modification
+                                                    th  Complex
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th  Simple
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th  Very simple
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th(colspan='2')  Copy
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th(colspan='2')  Deletion
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th(colspan='2')  Graphics Design
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr.success
+                                                    th(colspan='2')  Total
+                                                    td  0
+                                                    td  0
+                                                    td  0
+                                                    td  0
+                                                    td  0
+                                                    td  0
+                                                    td  0
+                                                    td  0
+                                                    td  0
+                                                    td  0
+                                                    td  0
+                                                    td  0
+                                                    td  0
+                                        h4 Business Site
+                                        table#Business.table.table-condensed.table-hover.table-bordered
+                                            thead
+                                                tr
+                                                    th(colspan='2', width='35%')
+                                                    th(width='5%')  Total
+                                                    th(width='5%')  Asia
+                                                    th(width='5%')  China
+                                                    th(width='5%')  India
+                                                    th(width='5%')  Taiwan
+                                                    th(width='5%')  Japan
+                                                    th(width='5%')  MEA
+                                                    th(width='5%')  Europe
+                                                    th(width='5%')  CIS
+                                                    th(width='5%')  Latin America
+                                                    th(width='5%')  Canada
+                                                    th(width='5%')  US
+                                                    th(width='5%')  non-NSC
+                                            tbody
+                                                tr
+                                                    th(rowspan='12', width='12%') Creation
+                                                    th  Large Product
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th  Medium Product
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th  Small Product
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th Large Static
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th  Medium Static
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th  Small Static
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th Static
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th  DHP Default Page
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th  DHP Target Page
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th  Large Smart protal
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th  Medium Smart Portal
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th  Small Smart Portal
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th(rowspan='3')  Modification
+                                                    th  Complex
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th  Simple
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th  Very simple
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th(colspan='2')  Copy
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th(colspan='2')  Deletion
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th(colspan='2')  Graphics Design
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th(colspan='2')  Total
+                                                    td  0
+                                                    td  0
+                                                    td  0
+                                                    td  0
+                                                    td  0
+                                                    td  0
+                                                    td  0
+                                                    td  0
+                                                    td  0
+                                                    td  0
+                                                    td  0
+                                                    td  0
+                                                    td  0
+                                        h4 Brand Communication
+                                        table#Brand.table.table-condensed.table-hover.table-bordered
+                                            thead
+                                                tr
+                                                    th(colspan='2', width='43%')
+                                                    th(width='5%')  Total
+                                                    th(width='4%')  Asia
+                                                    th(width='4%')  China
+                                                    th(width='4%')  India
+                                                    th(width='4%')  Taiwan
+                                                    th(width='4%')  Japan
+                                                    th(width='4%')  MEA
+                                                    th(width='4%')  Europe
+                                                    th(width='4%')  CIS
+                                                    th(width='4%')  Latin America
+                                                    th(width='4%')  Canada
+                                                    th(width='4%')  US
+                                                    th(width='4%')  non-NSC
+                                                    th(width='4%') BC Global
+                                            tbody
+                                                tr
+                                                    th(rowspan='8', width='12%') Creation
+                                                    th  Country Gateway
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th  Corporate Profile
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th  News
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th Career
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th  Sustainability
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th  Complex Article
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th Normal Article
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th  Simple Article
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th(rowspan='3')  Modification
+                                                    th  Complex
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th  Simple
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th  Very simple
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th(colspan='2')  Copy
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th(colspan='2')  Deletion
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th(colspan='2')  Graphics Design
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr.success
+                                                    th.success(colspan='2')  Total
+                                                    td  0
+                                                    td  0
+                                                    td  0
+                                                    td  0
+                                                    td  0
+                                                    td  0
+                                                    td  0
+                                                    td  0
+                                                    td  0
+                                                    td  0
+                                                    td  0
+                                                    td  0
+                                                    td  0
+                                                    td  -
+                                        h4 Customer Support Site
+                                        table#customer_support.table.table-condensed.table-hover.table-bordered
+                                            thead
+                                                tr
+                                                    th(colspan='2', width='35%')
+                                                    th(width='5%')  Total
+                                                    th(width='5%')  Asia
+                                                    th(width='5%')  China
+                                                    th(width='5%')  India
+                                                    th(width='5%')  Taiwan
+                                                    th(width='5%')  Japan
+                                                    th(width='5%')  MEA
+                                                    th(width='5%')  Europe
+                                                    th(width='5%')  CIS
+                                                    th(width='5%')  Latin America
+                                                    th(width='5%')  Canada
+                                                    th(width='5%')  US
+                                                    th(width='5%')  non-NSC
+                                            tbody
+                                                tr
+                                                    th(rowspan='5', width='12%') Creation
+                                                    th  General Product
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th  Simple Product
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th  Static Page
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th Download
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th Dummy
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th(rowspan='3')  Modification
+                                                    th  Complex
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th  Simple
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th  Very simple
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th(colspan='2')  Copy
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th(colspan='2')  Deletion
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th(colspan='2')  Graphics Design
+                                                    td  0
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                    td  -
+                                                tr
+                                                    th(colspan='2')  Total
+                                                    td  0
+                                                    td  0
+                                                    td  0
+                                                    td  0
+                                                    td  0
+                                                    td  0
+                                                    td  0
+                                                    td  0
+                                                    td  0
+                                                    td  0
+                                                    td  0
+                                                    td  0
+                                                    td  0
+                                        table#total.table.table-condensed.table-hover.table-bordered
+                                            thead
+                                                tr
+                                                    th(width='60%')  Total OPR volume
+                                                    th(width='40%')  0
+                                            tbody
+                                                tr
+                                                    th  Consumer
+                                                    td  0
+                                                tr
+                                                    th  Business
+                                                    td  0
+                                                tr
+                                                    th  Brand Communication
+                                                    td  0
+                                                tr
+                                                    th Customer Support
+                                                    td  0
+                                                tr
+                                                    th Bulk Request 1
+                                                    td  0
+                                                tr
+                                                    th Bulk Request 2
+                                                    td  0
+                                    #panel-Asia.tab-pane
+                                    #panel-China.tab-pane
+                                    #panel-India.tab-pane
+                                    #panel-Taiwan.tab-pane
+                                    .tab-pane(id='panel-Japan(CS)')
+                                    #panel-MEA.tab-pane
+                                    #panel-Europe.tab-pane
+                                    #panel-CIS.tab-pane
+                                    .tab-pane(id='panel-Latin America')
+                                    #panel-Canada.tab-pane
+                                    #panel-US.tab-pane
+                                    .tab-pane(id='panel-Other (BC Global)')
+                                    .tab-pane(id='panel-non NSC request')
+        script.
+            $(function () {
+                $('#mydate').glDatePicker({
+
+                    format: 'yyyy-mm'
+                });
+            });

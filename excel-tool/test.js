@@ -1,0 +1,10 @@
+var a=3;
+var b=a;
+console.log(a);
+console.log(b);
+b=2;
+console.log(a);
+console.log(b);
+var b=4;
+console.log(a);
+console.log(b);
